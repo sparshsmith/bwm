@@ -5,10 +5,14 @@
   "projects": {
     "bwn-cli": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "spec": false
+        }
+      },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "bwm",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -126,6 +130,12 @@
           }
         }
       }
-    }},
-  "defaultProject": "bwn-cli"
+    }
+  },
+  "defaultProject": "bwn-cli",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
